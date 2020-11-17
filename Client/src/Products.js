@@ -5,21 +5,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 // import { Cart } from './components/Product/Cart';
 import Axios from 'axios';
-import styled from 'styled-components';
 import './Products.css';
 import './App.css';
-import {
-  MDBCard,
-  MDBCardBody,
-  MDBCardImage,
-  MDBCardTitle,
-  MDBCardText,
-  MDBRow,
-  MDBCol,
-  MDBView,
-  MDBIcon,
-  MDBContainer,
-} from 'mdbreact';
 
 const searchBarStyle = {
   margin: '35px',

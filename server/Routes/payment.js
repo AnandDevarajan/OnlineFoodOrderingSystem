@@ -3,7 +3,6 @@ const config = require('../Config/DB_Config');
 const router = express.Router();
 const stripe = require('stripe')(process.env.KEY);
 const { v4: uuidv4 } = require('uuid');
-const con = config.con;
 
 router.post('/', (req, res) => {
   const { product, token } = req.body;

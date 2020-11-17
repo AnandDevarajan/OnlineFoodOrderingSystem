@@ -10,7 +10,6 @@ const hotelRoute = require('./Routes/hotel');
 const paymentRoute = require('./Routes/payment');
 const userRoute = require('./Routes/user');
 const orderRoute = require('./Routes/order');
-//BarGraph Plotting
 const viewProd = require('./Routes/viewmostordprod');
 const viewUserOrd = require('./Routes/viewuserwmostord');
 const viewUserProd = require('./Routes/viewusersordmostprod');
