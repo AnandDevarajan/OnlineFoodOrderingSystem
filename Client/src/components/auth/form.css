@@ -1,0 +1,32 @@
+h5:hover {
+  cursor: pointer;
+  opacity:0.9;
+}
+
+.Appsignin
+{
+    background-image:url("https://cdn.pixabay.com/photo/2016/12/26/17/28/food-1932466_1280.jpg");
+    background-size: cover; 
+    background-repeat : no-repeat;
+    justify-content : center;
+    backdrop-filter: blur(10px);
+}
+
+.Appsignup{
+
+  background-image: url("https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&w=1000&q=80");
+  background-repeat: no-repeat;
+  background-size : cover;
+  justify-content : center;
+}
+
+.container {
+  flex-direction: column;
+  pointer-events:initial ;
+}
+
+.container:hover {
+  opacity:0.9;
+}
+
+

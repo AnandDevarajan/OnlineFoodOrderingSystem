@@ -1,0 +1,22 @@
+.detContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #40464c;
+  margin-left: 1px;
+}
+
+.CartStyle
+{
+  background-image: url("https://ak.picdn.net/shutterstock/videos/1018450003/thumb/12.jpg");
+  background-repeat: no-repeat;
+  background-size : cover;
+  background-blend-mode: saturation;
+  
+}
+
+
+.cartDetails {
+  margin-top: 10px;
+  margin-right: 10px;
+}

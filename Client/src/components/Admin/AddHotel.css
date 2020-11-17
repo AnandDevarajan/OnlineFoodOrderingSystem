@@ -1,0 +1,8 @@
+.HotelStyling
+{
+    background-image: url("https://i.pinimg.com/originals/c2/c6/4b/c2c64b930af48a341c3adef7c659d36e.png");
+    background-size: cover;
+    background-repeat : no-repeat;   
+    background-color: #cccccc; 
+    align-items: center;
+}
