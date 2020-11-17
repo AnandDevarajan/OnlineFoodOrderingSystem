@@ -55,9 +55,9 @@ app.use('/orders', orderRoute);
 
 app.use('/viewprod',viewProd);
 app.use('/vieworder',viewOrder);
-app.use('/viewuserOrd',viewuserOrd);
-app.use('/viewuserProd',viewuserProd);
-app.use('/viewhotel',viewhotel);
+app.use('/viewuserOrd',viewUserOrd);
+app.use('/viewuserProd',viewUserProd);
+app.use('/viewhotel',viewHotel);
 
 app.use('/', (req, res) => {
   res.send('Online Food Ordering System');
