@@ -41,22 +41,21 @@ app.use(
     },
   })
 );
+
+app.use('/', (req, res) => {
+  res.send('Online Food Ordering System');
+});
+
 app.use('/products', productRoute);
 app.use('/cart', cartRoute);
 app.use('/payment', paymentRoute);
 app.use('/hotels', hotelRoute);
 app.use('/users', userRoute);
 app.use('/orders', orderRoute);
-
-
 app.use('/viewprod',viewProd);
 app.use('/vieworder',viewOrder);
 app.use('/viewuserOrd',viewUserOrd);
 app.use('/viewuserProd',viewUserProd);
 app.use('/viewhotel',viewHotel);
-
-app.use('/', (req, res) => {
-  res.send('Online Food Ordering System');
-});
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
