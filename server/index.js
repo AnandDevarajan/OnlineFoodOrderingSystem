@@ -15,11 +15,11 @@ const paymentRoute = require('./Routes/payment');
 const userRoute = require('./Routes/user');
 const orderRoute = require('./Routes/order');
 //BarGraph Plotting
-const viewprod = require('./Routes/viewmostordprod');
-const viewuserOrd = require('./Routes/viewuserwmostord');
-const viewuserProd = require('./Routes/viewusersordmostprod');
-const viewhotel = require('./Routes/viewhotelwmostproducts');
-const vieworder = require('./Routes/viewordwmostprod');
+const viewProd = require('./Routes/viewmostordprod');
+const viewUserOrd = require('./Routes/viewuserwmostord');
+const viewUserProd = require('./Routes/viewusersordmostprod');
+const viewHotel = require('./Routes/viewhotelwmostproducts');
+const viewOrder = require('./Routes/viewordwmostprod');
 const app = express();
 
 const port = 3001 || process.env.PORT;
@@ -53,8 +53,8 @@ app.use('/users', userRoute);
 app.use('/orders', orderRoute);
 
 
-app.use('/viewprod',viewprod);
-app.use('/vieworder',vieworder);
+app.use('/viewprod',viewProd);
+app.use('/vieworder',viewOrder);
 app.use('/viewuserOrd',viewuserOrd);
 app.use('/viewuserProd',viewuserProd);
 app.use('/viewhotel',viewhotel);
