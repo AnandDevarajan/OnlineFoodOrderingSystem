@@ -1,10 +1,6 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();
-const stripe = require('stripe')(process.env.KEY);
-const { v4: uuidv4 } = require('uuid');
-
-
 const productRoute = require('./Routes/product');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
