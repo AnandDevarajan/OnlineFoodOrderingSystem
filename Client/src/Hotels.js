@@ -79,7 +79,7 @@ export const Hotels = () => {
                       <tr key={key} style={{ height: '3px' }}>
                         <td scope='row'>{val.hotel_name}</td>
                         <td></td>
-                        <td>{val.place}</td>
+                        <td><p>{val.place}</p></td>
                         <td></td>
                         <td>{val.contact_no}</td>
                         <td></td>
