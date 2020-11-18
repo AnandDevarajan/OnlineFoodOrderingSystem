@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
-import { Table } from 'react-bootstrap';
 
 import './form.css';
 export const UpdateOrders = () => {
@@ -57,7 +56,6 @@ export const UpdateOrders = () => {
               <tbody className='text-white'>
                 <tr>
                   <td>{val.order_id}</td>
-
                   <td>{val.product_id}</td>
                   <td>{val.total}</td>
                   <td>{val.user_id}</td>

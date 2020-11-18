@@ -2,14 +2,11 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import Axios from 'axios';
-import { Redirect, useHistory } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import { Container } from 'react-bootstrap';
-import { Products } from '../../Products';
+
 
 export const UpdateProduct = () => {
-  let history = useHistory();
-
   const [productName, setProductName] = useState('');
   const [productPrice, setProductPrice] = useState('');
   const [productStock, setProductStock] = useState('');

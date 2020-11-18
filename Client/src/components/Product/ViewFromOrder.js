@@ -1,42 +1,19 @@
-import React, { useEffect, useState, useContext } from 'react';
-import { useHistory, Redirect } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
-// import { Cart } from './components/Product/Cart';
 import Axios from 'axios';
-import styled from 'styled-components';
 import './Products.css';
 import './App.css';
 import './orders.css';
-import {
-  MDBCard,
-  MDBCardBody,
-  MDBCardImage,
-  MDBCardTitle,
-  MDBCardText,
-  MDBRow,
-  MDBCol,
-  MDBView,
-  MDBIcon,
-  MDBContainer,
-} from 'mdbreact';
-
-const searchBarStyle = {
-  margin: '35px',
-  position: 'center',
-  size: '25px',
-};
 
 export const ViewFromOrder = () => {
-  const [productList, setProductList] = useState([]);
   const [image, setImage] = useState('');
   const [hotelList, setHotelList] = useState([]);
   const [pname, setpname] = useState('');
   const [desc, setDesc] = useState('');
   const [price, setPrice] = useState('');
   const [hotelName, setHotelName] = useState(localStorage.getItem('pid'));
-  const [role, setRole] = useState(localStorage.getItem('role'));
   console.log(hotelName);
   useEffect(() => {
     Axios.get(`http://localhost:3001/products/${hotelName}`)

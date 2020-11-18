@@ -12,8 +12,6 @@ export const Cart = () => {
   const [pincode, setPincode] = useState('');
   const [phoneno, setphoneNo] = useState('');
   const [userId, setUserId] = useState(localStorage.getItem('user_id'));
-  const [productID, setProductId] = useState([]);
-
   const [total, setTotal] = useState(0);
   
   useEffect(() => {

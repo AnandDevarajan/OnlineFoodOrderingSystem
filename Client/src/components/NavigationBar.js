@@ -73,7 +73,6 @@ export const NavigationBar = () => {
     });
   };
 
-  const helper = () => {};
   return (
     <Styles>
       <Navbar style={{ backgroundColor: '#222831',zIndex:'100'}} expand='lg'>
@@ -81,10 +80,9 @@ export const NavigationBar = () => {
         <Navbar.Brand href='/'>
           <div style={ divStyle1 }></div>
           <div>
-            <h3 onClick={helper}>Food Ordering System </h3>
+            <h3>Food Ordering System </h3>
           </div>
         </Navbar.Brand>
-
 
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>

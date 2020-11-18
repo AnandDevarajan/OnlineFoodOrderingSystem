@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
-import { Table } from 'react-bootstrap';
 import './form.css';
 export const Order = () => {
   const [userId, setUserId] = useState(localStorage.getItem('user_id'));
@@ -143,7 +142,6 @@ export const Order = () => {
       <br />
       <br />
       <br />
-
       <br />
       <br />
       <br />

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import Axios from 'axios';
-import { Redirect } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import { Container } from 'react-bootstrap';
 import './AddProduct.css';
