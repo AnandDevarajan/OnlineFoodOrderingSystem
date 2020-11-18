@@ -16,7 +16,7 @@ const options = {
 	animationDuration:2000,
 	animationEnabled: true,
 	exportEnabled: true,
-	theme: "dark2", //"light1", "light2" , "dark1", "dark2"
+	theme: "dark1", //"light1", "light2" , "dark1", "dark2"
 	title:{
 	text:"Users Against the No of Products Ordered"},
 	indexLabel: "{y}",

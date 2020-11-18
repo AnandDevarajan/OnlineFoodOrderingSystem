@@ -53,7 +53,7 @@ export const UpdateOrders = () => {
 
           {orderList.map((val, key) => {
             return (
-              <tbody className='text-white'>
+              <tbody>
                 <tr>
                   <td>{val.order_id}</td>
                   <td>{val.product_id}</td>

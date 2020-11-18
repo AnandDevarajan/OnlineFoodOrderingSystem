@@ -75,10 +75,9 @@ export const NavigationBar = () => {
 
   return (
     <Styles>
-      <Navbar style={{ backgroundColor: '#222831', zIndex: '100' }} expand='lg'>
+      <Navbar style={{ backgroundColor: '#213e3b', zIndex: '100' }} expand='lg'>
         <Navbar.Brand href='/'>
-          <div style={divStyle1}>
-          </div>
+          <div style={divStyle1}></div>
           <div>
             <h3>Food Ordering System </h3>
           </div>
@@ -131,8 +130,10 @@ export const NavigationBar = () => {
               >
                 Signout
               </Nav.Link>
-              <Nav.Item style={{ marginLeft: '300px' }}>
-                <Nav.Link className='text-success'>Welcome {name}</Nav.Link>
+              <Nav.Item style={{ marginLeft: '290px' }}>
+                <Nav.Link>
+                  <h5 style={{ color: '#e8ffff' }}>Welcome {name}</h5>
+                </Nav.Link>
               </Nav.Item>
             </Nav>
           )}
@@ -166,7 +167,10 @@ export const NavigationBar = () => {
                 </Nav.Link>
               </Nav.Item>
               <Nav.Item style={{ marginLeft: '400px' }}>
-                <Nav.Link className='text-success'>Welcome {name}</Nav.Link>
+                <Nav.Link>
+                  {' '}
+                  <h5 style={{ color: '#e8ffff' }}>Welcome {name}</h5>
+                </Nav.Link>
               </Nav.Item>
             </Nav>
           )}

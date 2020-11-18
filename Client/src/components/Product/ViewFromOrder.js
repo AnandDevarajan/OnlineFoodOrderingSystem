@@ -34,7 +34,7 @@ export const ViewFromOrder = () => {
     <div className="OrderStyling">
       <ToastContainer position='top-center' />
 
-      <div style={searchBarStyle}>
+      <div>
       
       </div>
 
@@ -55,7 +55,7 @@ export const ViewFromOrder = () => {
                 <th></th>
               </tr>
             </thead>
-            <tbody className='text-white'>
+            <tbody >
               <tr style={{ height: '3px' }}>
                 <td>
                   <img

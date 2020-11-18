@@ -79,7 +79,7 @@ export const Products = () => {
                 <th></th>
               </tr>
             </thead>
-            <tbody className='text-white'>
+            <tbody >
               {productList.map((val, key) => {
                 return (
                   <tr key={key} style={{ height: '3px' }}>

@@ -28,7 +28,7 @@ import ViewOrdwmostProd from './ViewOrdwmostProd';
 
 function App() {
   return (
-    <div style={{ backgroundColor: '#393e46' }}>
+    <div style={{ backgroundColor: '#dfdfdf' }}>
       <React.Fragment>
         <Router>
           <NavigationBar />
@@ -45,13 +45,10 @@ function App() {
             <Route path='/signin' component={Signin} />
             <Route path='/signup' component={Signup} />
             <Route path='/cart' component={Cart} />
-
             <Route path='/orders' component={Order} />
             <Route path='/adminOrders' component={UpdateOrders} />
             <Route path='/viewFromOrders' component={ViewFromOrder} />
-
             <Route path='/addViewProduct' component={AddProductFromHotel} />
-
             <Route path='/rateHotel' component={RateHotel} />
             <Route path='/viewhotelwmostprod' component={ViewHotelwmostProd} />
             <Route path='/viewmostordprod' component={ViewmostOrdProd} />

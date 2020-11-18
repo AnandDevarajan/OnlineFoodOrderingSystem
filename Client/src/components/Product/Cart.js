@@ -138,7 +138,7 @@ export const Cart = () => {
                     <th scope='col'>Quantity</th>
                   </tr>
                 </thead>
-                <tbody className='text-white'>
+                <tbody >
                   {cartList.map((val, key) => {
                     return (
                       <tr key={key}>

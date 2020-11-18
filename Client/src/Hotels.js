@@ -72,7 +72,8 @@ export const Hotels = () => {
                     </th>
                   </tr>
                 </thead>
-                <tbody className='text-white'>
+                <tbody > 
+                {/* className='text-white'  ADD this in tbody tag to make text of table contents white*/}
                   {hotelList.map((val, key) => {
                     return (
                       <tr key={key} style={{ height: '3px' }}>

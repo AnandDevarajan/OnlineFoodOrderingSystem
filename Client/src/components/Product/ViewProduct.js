@@ -72,24 +72,24 @@ export const ViewProduct = () => {
             <th scope='col'>Rating</th>
           </tr>
         </thead>
-        <tbody className='text-white'>
+        <tbody >
           {hotelList.map((val, key) => {
             return (
               <tr key={key} style={{ height: '3px' }}>
                 <td scope='row'>
-                  <font style={{ color: 'white' }}> {val.hotel_name}</font>
+                {val.hotel_name}
                 </td>
                 <td>
-                  <font style={{ color: 'white' }}>{val.place}</font>
+                 {val.place}
                 </td>
                 <td>
-                  <font style={{ color: 'white' }}>{val.contact_no}</font>
+                 {val.contact_no}
                 </td>
                 <td>
-                  <font style={{ color: 'white' }}>{val.pincode}</font>
+              {val.pincode}
                 </td>
                 <td>
-                  <font style={{ color: 'white' }}>{val.hotel_rating} ⭐</font>
+                {val.hotel_rating} ⭐
                 </td>
               </tr>
             );
@@ -144,7 +144,7 @@ export const ViewProduct = () => {
                   <th></th>
                 </tr>
               </thead>
-              <tbody className='text-white'> 
+              <tbody > 
                 {productList.map((val, key) => {
                   return (
                     <tr key={key} style={{ height: '3px' }}>
