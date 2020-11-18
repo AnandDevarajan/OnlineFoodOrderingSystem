@@ -23,10 +23,10 @@ export const Products = () => {
   useEffect(() => {
     Axios.get('http://localhost:3001/products/').then((response) => {
       console.log(response.data);
+      console.log(response.data)
       setProductList(response.data);
     });
   }, []);
-
   const deleteProduct = (id) => {
     Axios.delete(`http://localhost:3001/products/${id}`).then((response) => {
       window.location.pathname = '/products';
