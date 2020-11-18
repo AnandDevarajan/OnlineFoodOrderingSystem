@@ -6,7 +6,7 @@ export const RateHotel = () => {
   const [list, setList] = useState([]);
   const [rate, setRate] = useState('');
   const [initRate, setinitRate] = useState('');
-
+  const [stat, setStat] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       const respHotel = await Axios.get(
@@ -23,6 +23,7 @@ export const RateHotel = () => {
       console.log(respone);
       setinitRate(respone.data[0].hotel_rating);
     });
+    setStat(!stat);
   };
   const submitRating = () => {
     console.log('init' + initRate + 'rate' + rate);
@@ -35,6 +36,7 @@ export const RateHotel = () => {
     setRate('');
     newRa = 0;
     localStorage.removeItem('rid');
+    setStat(!stat);
     window.location.pathname = '/orders';
   };
   return (
@@ -59,12 +61,15 @@ export const RateHotel = () => {
             </div>
           );
         })}
-        <button className='btn btn-warning ' onClick={giveRate}>
-          Confirm
-        </button>
-        <button className='btn btn-success ' onClick={submitRating}>
-          Submit Rating
-        </button>
+        {stat == false ? (
+          <button className='btn btn-warning ' onClick={giveRate}>
+            Submit Rating
+          </button>
+        ) : (
+          <button className='btn btn-success ' onClick={submitRating}>
+            Confirm
+          </button>
+        )}
       </div>
       <br />
       <br />

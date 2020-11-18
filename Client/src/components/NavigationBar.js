@@ -8,7 +8,7 @@ const img = require('./logo.png');
 const divStyle1 = {
   width: '327px',
   height: '69px',
-  backgroundImage: `url(${img})`
+  backgroundImage: `url(${img})`,
 };
 
 const Styles = styled.div`
@@ -75,10 +75,10 @@ export const NavigationBar = () => {
 
   return (
     <Styles>
-      <Navbar style={{ backgroundColor: '#222831',zIndex:'100'}} expand='lg'>
-
+      <Navbar style={{ backgroundColor: '#222831', zIndex: '100' }} expand='lg'>
         <Navbar.Brand href='/'>
-          <div style={ divStyle1 }></div>
+          <div style={divStyle1}>
+          </div>
           <div>
             <h3>Food Ordering System </h3>
           </div>
@@ -103,15 +103,15 @@ export const NavigationBar = () => {
               <Nav.Item>
                 <Nav.Link href='/adminOrders'>Orders</Nav.Link>
               </Nav.Item>
-              
+
               <Nav.Item>
                 <Nav.Link href='/viewhotelwmostprod'>R1</Nav.Link>
               </Nav.Item>
-              
+
               <Nav.Item>
-              <Nav.Link href='/viewmostordprod'>R2</Nav.Link>
+                <Nav.Link href='/viewmostordprod'>R2</Nav.Link>
               </Nav.Item>
-              
+
               <Nav.Item>
                 <Nav.Link href='/viewusersordmostprod'>R3</Nav.Link>
               </Nav.Item>
@@ -119,7 +119,7 @@ export const NavigationBar = () => {
               <Nav.Item>
                 <Nav.Link href='/viewuserwmostord'>R4</Nav.Link>
               </Nav.Item>
-              
+
               <Nav.Item>
                 <Nav.Link href='/viewordwmostprod'>R5</Nav.Link>
               </Nav.Item>
@@ -177,8 +177,7 @@ export const NavigationBar = () => {
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link href='/signup'>SignUp</Nav.Link>
-              </Nav.Item> 
-             
+              </Nav.Item>
             </Nav>
           )}
         </Navbar.Collapse>
