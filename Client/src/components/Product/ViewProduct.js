@@ -103,7 +103,7 @@ export const ViewProduct = () => {
       {productList.length === 0 ? (
         <div>
           <h1>No items available</h1>
-          {role === 1 && (
+          {role == 1 && (
             <button
               className='btn  btn-success'
               onClick={() => {
@@ -130,7 +130,7 @@ export const ViewProduct = () => {
                   <th scope='col'>Price</th>
                   <th></th>
                   <th>
-                    {role === 1 && (
+                    {role ==1 && (
                       <button
                         className='btn  btn-success '
                         onClick={() => {

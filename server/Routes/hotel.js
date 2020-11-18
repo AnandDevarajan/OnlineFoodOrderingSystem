@@ -87,6 +87,37 @@ router.put('/:id', (req, res) => {
   );
 });
 
+router.put('/rate/:id', (req, res) => {
+  let id = req.params.id;
+  const { newRa } = req.body;
+  const hotel_rating = newRa;
+
+  con.query(
+    `UPDATE HOTEL SET hotel_rating=${hotel_rating} WHERE hotel_name='${id}'`,
+    (err, result) => {
+      if (err) {
+        console.log(err);
+      }
+      res.json({
+        success: 'Successfully updated the product',
+      });
+    }
+  );
+});
+
+router.get('/rating/:id', (req, res) => {
+  let hid = req.params.id;
+  con.query(
+    `SELECT hotel_rating  FROM HOTEL where hotel_name='${hid}'`,
+    (err, result) => {
+      if (err) {
+        res.send(err);
+      }
+      res.json(result);
+    }
+  );
+});
+
 // DELETE A HOTEL
 router.delete('/:id', (req, res) => {
   let id = req.params.id;

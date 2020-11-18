@@ -97,19 +97,6 @@ export const UpdateHotel = () => {
               }}
             />
           </div>
-          <div className='form-group'>
-            <input
-              type='text'
-              pattern='\d*'
-              className='form-control'
-              placeholder='Rating out of 5'
-              maxLength='1'
-              defaultValue={hotelRating}
-              onChange={(e) => {
-                setHotelRating(e.target.value);
-              }}
-            />
-          </div>
 
           <button type='submit' className='btn btn-success'>
             Update Hotel

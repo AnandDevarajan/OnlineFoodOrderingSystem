@@ -38,7 +38,7 @@ export const Hotels = () => {
   };
 
   return (
-    <div className="HotelStyling">
+    <div className='HotelStyling'>
       <div>
         <div className='container-fluid d-flex justify-content-center'>
           <div className='row'>
@@ -84,7 +84,12 @@ export const Hotels = () => {
                         <td></td>
                         <td>{val.pincode}</td>
                         <td></td>
-                        <td>{val.hotel_rating} ⭐</td>
+                        {val.hotel_rating == 0 ? (
+                          <td>No Rating</td>
+                        ) : (
+                          <td>{val.hotel_rating} ⭐</td>
+                        )}
+
                         <td></td>
 
                         <td>
@@ -93,7 +98,7 @@ export const Hotels = () => {
                             style={{ height: '35px', width: '100px' }}
                             onClick={() => viewHotelProducts(val.hotel_name)}
                           >
-                            view 
+                            view
                           </button>
                         </td>
 

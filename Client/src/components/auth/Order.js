@@ -28,6 +28,10 @@ export const Order = () => {
     });
   };
 
+  const rateProduct = (id) => {
+    localStorage.setItem('rid', id);
+    window.location.pathname = '/rateHotel';
+  };
   return (
     <div className='container'>
       <div>
@@ -91,7 +95,7 @@ export const Order = () => {
                         >
                           View
                         </button>
-                        {val.status != 'Delivered' && (
+                        {val.status != 'Delivered' ? (
                           <button
                             className='btn btn-danger '
                             style={{ border: 'none' }}
@@ -100,6 +104,16 @@ export const Order = () => {
                             }}
                           >
                             cancel
+                          </button>
+                        ) : (
+                          <button
+                            className='btn btn-warning '
+                            style={{ border: 'none' }}
+                            onClick={() => {
+                              rateProduct(val.product_id);
+                            }}
+                          >
+                            Rate
                           </button>
                         )}
                       </td>

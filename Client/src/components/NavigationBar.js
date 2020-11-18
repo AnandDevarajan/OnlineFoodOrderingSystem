@@ -76,7 +76,7 @@ export const NavigationBar = () => {
   const helper = () => {};
   return (
     <Styles>
-      <Navbar style={{ backgroundColor: '#222831' }} expand='lg'>
+      <Navbar style={{ backgroundColor: '#222831',zIndex:'100'}} expand='lg'>
 
         <Navbar.Brand href='/'>
           <div style={ divStyle1 }></div>
