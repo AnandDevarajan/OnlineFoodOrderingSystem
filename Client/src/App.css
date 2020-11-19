@@ -8,32 +8,30 @@
 }
 
 .table-style {
-  font-family:cursive;
-  font-size:20px; 
-  margin:30px;
-  color:white;
+  font-family: cursive;
+  font-size: 20px;
+  margin: 30px;
+  color: white;
   border: 5px solid grey;
   background-color: bisque;
-  
 }
-.table-style:hover{
+.table-style:hover {
   background-color: #ffc7c4;
- 
 }
 
 .product-imagestyle {
-  font-size:15px;
+  font-size: 15px;
 }
 .leftimg {
-float:left;
+  float: left;
 }
 .rightimg {
-  float:right;
+  float: right;
 }
 .card-img-top {
-  object-position:center;
+  object-position: center;
   object-fit: cover;
-  height:300px;
+  height: 300px;
 }
 
 .App {

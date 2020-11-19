@@ -33,7 +33,7 @@ function App() {
         <Router>
           <NavigationBar />
           <Switch>
-            <Route exact path='/' component={Home} />
+            {/* <Route exact path='/' component={Home} /> */}
             <Route exact path='/about' component={About} />
             <Route path='/products' component={Products} />
             <Route path='/hotels' component={Hotels} />

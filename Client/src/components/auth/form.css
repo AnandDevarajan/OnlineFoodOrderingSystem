@@ -9,7 +9,8 @@ h5:hover {
     background-size: cover; 
     background-repeat : no-repeat;
     justify-content : center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(200px);
+  
 }
 
 .Appsignup{

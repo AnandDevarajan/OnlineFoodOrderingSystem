@@ -5,6 +5,7 @@ import { useHistory, Redirect } from 'react-router-dom';
 import Axios from 'axios';
 import styled from 'styled-components';
 import './Products.css';
+import bannerh from './hotelb.jpg'
 import './App.css';
 
 const searchBarStyle = {
@@ -39,24 +40,37 @@ export const Hotels = () => {
 
   return (
     <div className='HotelStyling'>
+       <div className='bannerh'>
+          <img className='bannerh__image' src={bannerh} alt='' />
+        </div>
       <div>
         <div className='container-fluid d-flex justify-content-center'>
           <div className='row'>
             <div className='col-md-3'>
-              <table className='table '>
+              <table className='table ' style={{marginTop:"35px"}}>
                 <thead className='thead-dark '>
                   <tr>
-                    <th scope='col'>Hotel_Name</th>
+                  <th>Hotel_Name</th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th>Place</th>
+                  <th></th>
+                  <th></th>
+                    <th scope='col'></th>
+                    <th>Contact_No</th>
+                    <th scope='col'></th>
                     <th></th>
-                    <th scope='col'>Place</th>
+                    <th scope='col'></th>
+                    <th>Pincode</th>
+                    <th scope='col'></th>
                     <th></th>
-                    <th scope='col'>Contact_No</th>
-                    <th></th>
-                    <th scope='col'>Pincode</th>
-                    <th></th>
-                    <th scope='col'>Rating</th>
+                    <th scope='col'></th>
+                    <th>Rating</th>
                     <th></th>
                     <th></th>
+                 
+                
                     <th>
                       {role == 1 && (
                         <button
@@ -72,18 +86,30 @@ export const Hotels = () => {
                     </th>
                   </tr>
                 </thead>
-                <tbody > 
-                {/* className='text-white'  ADD this in tbody tag to make text of table contents white*/}
+                <tbody>
+                  {/* className='text-white'  ADD this in tbody tag to make text of table contents white*/}
                   {hotelList.map((val, key) => {
                     return (
                       <tr key={key} style={{ height: '3px' }}>
                         <td scope='row'>{val.hotel_name}</td>
                         <td></td>
+                        <td>
+                         
+                        </td>
+                        <td> </td>
                         <td><p>{val.place}</p></td>
                         <td></td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
                         <td>{val.contact_no}</td>
                         <td></td>
+                        <td></td>
+                        <td></td>
                         <td>{val.pincode}</td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         {val.hotel_rating == 0 ? (
                           <td>No Rating</td>

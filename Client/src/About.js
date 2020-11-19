@@ -6,18 +6,18 @@ const Style = styled.div`
   margin-left: 6em;
   margin-right: 6em;
 `;
-const GridWrapper = styled.div`
-  background-image: url('https://wallpaperaccess.com/full/1316970.jpg');
-  background-size: cover;
-  width:100%;
-  height:100%;  
-  font-size: 25px;
-  color:#0A014D;
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: minmax(25px, auto);
-`; 
+// const GridWrapper = styled.div`
+//   background-image: url('https://wallpaperaccess.com/full/1316970.jpg');
+//   background-size: cover;
+//   width:100%;
+//   height:100%;  
+//   font-size: 25px;
+//   color:#0A014D;
+//   grid-template-columns: repeat(12, 1fr);
+//   grid-auto-rows: minmax(25px, auto);
+// `; 
 export const About = () => (
-  <GridWrapper>
+ <div>
     <Style>
       <br />
     <h2>About Page</h2>
@@ -43,5 +43,5 @@ export const About = () => (
     <br />
     <br />
     <br />
-  </GridWrapper>
+    </div>
 )

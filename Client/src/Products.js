@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import Axios from 'axios';
 import './Products.css';
 import './App.css';
-
+import banner from './banner.jpeg';
 const searchBarStyle = {
   margin: '35px',
   position: 'center',
@@ -23,7 +23,7 @@ export const Products = () => {
   useEffect(() => {
     Axios.get('http://localhost:3001/products/').then((response) => {
       console.log(response.data);
-      console.log(response.data)
+      console.log(response.data);
       setProductList(response.data);
     });
   }, []);
@@ -51,12 +51,14 @@ export const Products = () => {
 
   return (
     <div>
-      <ToastContainer position='top-right' />
-      <div style={searchBarStyle}>
+      <div className='banner'>
+        <img className='banner__image' src={banner} alt='' />
       </div>
-      <div>
+      <ToastContainer position='top-right' />
+      <div style={searchBarStyle}></div>
+      <div >
         <div className='container-fluid d-flex justify-content-center'>
-          <table className='table'>
+          <table className='table' style={{ marginTop: '50px' }}>
             <thead className='thead-dark'>
               <tr>
                 <th scope='col'>Food</th>
@@ -70,7 +72,8 @@ export const Products = () => {
                     <button
                       className='btn  btn-success '
                       onClick={() => (window.location.pathname = '/addProduct')}
-                      style={{ width: '200px' }}>
+                      style={{ width: '200px' }}
+                    >
                       Add Product
                     </button>
                   )}
@@ -79,7 +82,7 @@ export const Products = () => {
                 <th></th>
               </tr>
             </thead>
-            <tbody >
+            <tbody>
               {productList.map((val, key) => {
                 return (
                   <tr key={key} style={{ height: '3px' }}>
@@ -91,18 +94,10 @@ export const Products = () => {
                       />
                     </td>
                     {role == 1 && <td>{val.product_id}</td>}
-                    <td>
-                     {val.product_name}
-                    </td>
-                    <td>
-                     {val.description}
-                    </td>
-                    <td>
-                     {val.hotel_name}
-                    </td>
-                    <td>
-                   Rs {val.price} 
-                    </td>
+                    <td>{val.product_name}</td>
+                    <td>{val.description}</td>
+                    <td>{val.hotel_name}</td>
+                    <td>Rs {val.price}</td>
                     {role == 2 && (
                       <td>
                         <button

@@ -21,16 +21,10 @@ export const Signup = () => {
       email,
       pincode,
       phno,
-    }).then((response) => {
-      alert('Successfully registered');
-      toast('account created successfully', { type: 'success' });
-      console.log(response.data);
-      window.location.pathname = '/signin';
-    });
+    }).then((window.location.pathname = '/signin'));
   };
   return (
     <div className='Appsignup'>
-
       <ToastContainer position='top-center' />
 
       <Container>
@@ -88,16 +82,15 @@ export const Signup = () => {
               minLength='6'
               maxLength='6'
               onChange={(e) => {
-                if(e.target.value!=null)
-                {
-                  if(e.target.value<0)
-                {
-                  toast("The Pincode you entered is negative.Please Enter Again",{type:'error'});
-                }
-                else
-                {
-                  setPincode(e.target.value);  
-                }
+                if (e.target.value != null) {
+                  if (e.target.value < 0) {
+                    toast(
+                      'The Pincode you entered is negative.Please Enter Again',
+                      { type: 'error' }
+                    );
+                  } else {
+                    setPincode(e.target.value);
+                  }
                 }
               }}
             />
@@ -113,13 +106,13 @@ export const Signup = () => {
               required='true'
               name='user_phno'
               onChange={(e) => {
-                if(e.target.value<0)
-                {
-                  toast("The Phone number you entered is negative.Please Enter Again",{type:'error'});
-                }
-                else
-                {
-                  setPhno(e.target.value);  
+                if (e.target.value < 0) {
+                  toast(
+                    'The Phone number you entered is negative.Please Enter Again',
+                    { type: 'error' }
+                  );
+                } else {
+                  setPhno(e.target.value);
                 }
               }}
             />
@@ -128,7 +121,6 @@ export const Signup = () => {
           <button type='submit' className='btn btn-success'>
             Create User
           </button>
-
         </form>
       </Container>
 

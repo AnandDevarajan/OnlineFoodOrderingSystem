@@ -74,96 +74,69 @@ export const NavigationBar = () => {
   };
 
   return (
-    <Styles>
-      <Navbar
-        style={{
-          backgroundColor: '#213e3b',
-          height: '70px',
-        }}
-        expand='sm'
-      >
-        <Navbar.Brand href='/'>
-          <div></div>
-          <div style={{ marginRight: '30px' }}>
-            <h3>Food Ordering System </h3>
-          </div>
-        </Navbar.Brand>
+    <Styles
+      style={{
+   
+        position: 'sticky',
+        top: 0,
+        zIndex: '100',
+      }}
+    >
+      <nav>
+        <Navbar
+          style={{
+            backgroundColor: '#131921',
+            height: '70px',
+          }}
+          expand='sm'
+        >
+          <Navbar.Brand href='/products'>
+            <div></div>
+            <div style={{ marginRight: '30px' }}>
+              <h3>Food Ordering System </h3>
+            </div>
+          </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls='basic-navbar-nav' />
-        <Navbar.Collapse id='basic-navbar-nav'>
-          {role == 1 && (
-            <Nav className='navbar-mainstyle'>
-              <Nav.Item>
-                <Nav.Link href='/'>Home</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href='/about'>About</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href='/products'>Products</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href='/hotels'>Hotels</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href='/adminOrders'>Orders</Nav.Link>
-              </Nav.Item>
+          <Navbar.Toggle aria-controls='basic-navbar-nav' />
+          <Navbar.Collapse id='basic-navbar-nav'>
+            {role == 1 && (
+              <Nav className='navbar-mainstyle'>
+                <Nav.Item>
+                  <Nav.Link href='/products'>Home</Nav.Link>
+                </Nav.Item>
+                {/* <Nav.Item>
+                  <Nav.Link href='/about'>About</Nav.Link>
+                </Nav.Item> */}
+                {/* <Nav.Item>
+                  <Nav.Link href='/products'>Products</Nav.Link>
+                </Nav.Item> */}
+                <Nav.Item>
+                  <Nav.Link href='/hotels'>Hotels</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link href='/adminOrders'>Orders</Nav.Link>
+                </Nav.Item>
 
-              <Nav.Item>
-                <Nav.Link href='/viewhotelwmostprod'>R1</Nav.Link>
-              </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link href='/viewhotelwmostprod'>R1</Nav.Link>
+                </Nav.Item>
 
-              <Nav.Item>
-                <Nav.Link href='/viewmostordprod'>R2</Nav.Link>
-              </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link href='/viewmostordprod'>R2</Nav.Link>
+                </Nav.Item>
 
-              <Nav.Item>
-                <Nav.Link href='/viewusersordmostprod'>R3</Nav.Link>
-              </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link href='/viewusersordmostprod'>R3</Nav.Link>
+                </Nav.Item>
 
-              <Nav.Item>
-                <Nav.Link href='/viewuserwmostord'>R4</Nav.Link>
-              </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link href='/viewuserwmostord'>R4</Nav.Link>
+                </Nav.Item>
 
-              <Nav.Item>
-                <Nav.Link href='/viewordwmostprod'>R5</Nav.Link>
-              </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link href='/viewordwmostprod'>R5</Nav.Link>
+                </Nav.Item>
 
-              <Nav.Link
-                className='text-danger'
-                href='/signout'
-                onClick={signOut}
-              >
-                Signout
-              </Nav.Link>
-              <Nav.Item style={{ marginLeft: '230px' }}>
-                <Nav.Link>
-                  <h5 style={{ color: '#e8ffff' }}>Welcome {name}</h5>
-                </Nav.Link>
-              </Nav.Item>
-            </Nav>
-          )}
-          {role == 2 && (
-            <Nav className='navbar-mainstyle'>
-              <Nav.Item>
-                <Nav.Link href='/'>Home</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href='/about'>About</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href='/products'>Products</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href='/hotels'>Hotels</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href='/cart'>Cart</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href='/orders'>Orders</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
                 <Nav.Link
                   className='text-danger'
                   href='/signout'
@@ -171,27 +144,64 @@ export const NavigationBar = () => {
                 >
                   Signout
                 </Nav.Link>
-              </Nav.Item>
-              <Nav.Item style={{ marginLeft: '400px' }}>
-                <Nav.Link>
-                  {' '}
-                  <h5 style={{ color: '#e8ffff' }}>Welcome {name}</h5>
-                </Nav.Link>
-              </Nav.Item>
-            </Nav>
-          )}
-          {role != 1 && role != 2 && (
-            <Nav className='navbar-style'>
-              <Nav.Item>
-                <Nav.Link href='/signin'>SignIn</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link href='/signup'>SignUp</Nav.Link>
-              </Nav.Item>
-            </Nav>
-          )}
-        </Navbar.Collapse>
-      </Navbar>
+                <Nav.Item style={{ marginLeft: '230px' }}>
+                  <Nav.Link>
+                    <h5 style={{ color: '#e8ffff' }}>Welcome {name}</h5>
+                  </Nav.Link>
+                </Nav.Item>
+              </Nav>
+            )}
+            {role == 2 && (
+              <Nav className='navbar-mainstyle'>
+                <Nav.Item>
+                  <Nav.Link href='/products'>Home</Nav.Link>
+                </Nav.Item>
+
+                {/* <Nav.Item>
+                  <Nav.Link href='/products'>Products</Nav.Link>
+                </Nav.Item> */}
+                <Nav.Item>
+                  <Nav.Link href='/hotels'>Hotels</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link href='/cart'>Cart</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link href='/orders'>Orders</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link href='/about'>About</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link
+                    className='text-danger'
+                    href='/signout'
+                    onClick={signOut}
+                  >
+                    Signout
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item style={{ marginLeft: '400px' }}>
+                  <Nav.Link>
+                    {' '}
+                    <h5 style={{ color: '#e8ffff' }}>Welcome {name}</h5>
+                  </Nav.Link>
+                </Nav.Item>
+              </Nav>
+            )}
+            {role != 1 && role != 2 && (
+              <Nav className='navbar-style'>
+                <Nav.Item>
+                  <Nav.Link href='/signin'>SignIn</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link href='/signup'>SignUp</Nav.Link>
+                </Nav.Item>
+              </Nav>
+            )}
+          </Navbar.Collapse>
+        </Navbar>
+      </nav>
     </Styles>
   );
 };

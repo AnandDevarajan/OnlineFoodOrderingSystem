@@ -31,7 +31,7 @@ export const ViewFromOrder = () => {
       });
   }, []);
   return (
-    <div className="OrderStyling">
+    <div >
       <ToastContainer position='top-center' />
 
       <div>

@@ -49,6 +49,7 @@ export const UpdateOrders = () => {
             <th>Status</th>
             <th></th>
             <th></th>
+            <th></th>
           </thead>
 
           {orderList.map((val, key) => {
@@ -79,7 +80,17 @@ export const UpdateOrders = () => {
                     )}
                   </td>
                   <td>
-                    <button
+                    {val.status!='Delivered' ? (
+                       <button
+                       className='btn btn-success'
+                       onClick={() => {
+                         updateStatus(val);
+                       }}
+                     >
+                       update
+                     </button>
+                    ):(
+                      <button
                       className='btn btn-primary '
                       style={{ border: 'none' }}
                       onClick={() => {
@@ -88,18 +99,11 @@ export const UpdateOrders = () => {
                     >
                       View
                     </button>
+                    )}
+                   
                   </td>
                   <td>
-                    {val.status != 'Delivered' && (
-                      <button
-                        className='btn btn-success'
-                        onClick={() => {
-                          updateStatus(val);
-                        }}
-                      >
-                        update
-                      </button>
-                    )}
+      
                   </td>
                 </tr>
               </tbody>
