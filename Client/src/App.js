@@ -28,7 +28,7 @@ import ViewOrdwmostProd from './ViewOrdwmostProd';
 
 function App() {
   return (
-    <div style={{ backgroundColor: '#dfdfdf' }}>
+    <div style={{ backgroundColor: '#fff' }}>
       <React.Fragment>
         <Router>
           <NavigationBar />
